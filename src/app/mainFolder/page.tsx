@@ -8,7 +8,7 @@ const MainFolder = () => {
                     <h1 className="text-black font-bold text-2xl">Categories</h1>
                     <div className="flex flex-col gap-2">
                         <Link href={`appSection`} className="text-lg max-lm:text-base font-medium text-purple-700 cursor-pointer">Apps  (5)</Link>
-                        <Link href={`/`} className="text-lg max-lm:text-base font-medium text-purple-700 cursor-pointer">Editiors Pick  (4)</Link>
+                        <Link href={`podcastSection`} className="text-lg max-lm:text-base font-medium text-purple-700 cursor-pointer">Editiors Pick  (4)</Link>
                         <Link href={`gadgetSection`} className="text-lg max-lm:text-base font-medium text-purple-700 cursor-pointer">Gadget  (7)</Link>
                         <Link href={`gameSection`} className="text-lg max-lm:text-base font-medium text-purple-700 cursor-pointer">Games  (4)</Link>
                         <Link href={`tecnologySection`} className="text-lg max-lm:text-base font-medium text-purple-700 cursor-pointer">Technology  (7)</Link>
