@@ -88,12 +88,12 @@ const PodcastSection = () => {
 
                 <div className="mb-20 max-lm:mb-10">
                     <div className="w-[1400px] flex flex-row gap-10 max-2xl:w-[1220px] max-xl:w-[1000px] max-lg:w-[856px] max-lt:w-[728px] max-lt:gap-6 max-mt:w-[550px] max-mt:flex-col max-mt:items-center max-sm:w-[440px] max-lm:w-[400px] max-mm:w-[340px] max-st:w-[300px]">
-                        {podcastData.map((e) => {
+                        {podcastData.map((key, index) => {
                             return(
-                                <div className="flex flex-col gap-5 max-sm:mb-3">
-                                  <img className="animation-up max-mt:w-[550px] max-mt:h-[320px] max-sm:w-[440px] max-sm:h-[300px] max-lm:w-[400px] max-lm:h-[260px] max-mm:w-[340px] max-mm:h-[230px] max-st:w-[300px] max-st:h-[210px]" src={e.image} alt="podcast-image" />
-                                  <h1 className="text-2xl text-black font-bold max-lg:text-xl max-mt:text-2xl max-mm:text-xl">{e.heading}</h1>
-                                  <p className="text-lg text-gray-700 font-medium max-lg:text-base max-st:text-sm">{e.paragraph}</p>
+                                <div className="flex flex-col gap-5 max-sm:mb-3" key={index}>
+                                  <img className="animation-up max-mt:w-[550px] max-mt:h-[320px] max-sm:w-[440px] max-sm:h-[300px] max-lm:w-[400px] max-lm:h-[260px] max-mm:w-[340px] max-mm:h-[230px] max-st:w-[300px] max-st:h-[210px]" src={key.image} alt="podcast-image" />
+                                  <h1 className="text-2xl text-black font-bold max-lg:text-xl max-mt:text-2xl max-mm:text-xl">{key.heading}</h1>
+                                  <p className="text-lg text-gray-700 font-medium max-lg:text-base max-st:text-sm">{key.paragraph}</p>
                                    <div className="flex flex-row gap-5">
                                        <div className="flex flex-row gap-3 items-center">
                                           <img className="w-4 h-4" src="/icon/mic.png" alt="mic-icon" />

@@ -27,11 +27,11 @@ const MainFolder = () => {
                 <div className="flex flex-col gap-5">
                     <h1 className="text-black font-bold text-2xl animation-up">Recent Posts</h1>
                     <div className="flex flex-col gap-3">
-                        <Link href={``} className="w-64 max-lt:w-60  text-lg max-lg:text-base font-medium text-purple-700 cursor-pointer animation-popup">Running macOS and Windows 10 on the Same Computer</Link>
-                        <Link href={``} className="w-80 max-lg:w-72 max-lt:w-64 text-lg max-lg:text-base font-medium text-purple-700 cursor-pointer animation-popup">Apple opens another megastore in China amid William Barr criticism</Link>
-                        <Link href={``} className="w-64 max-lt:w-60 text-lg max-lg:text-base font-medium text-purple-700 cursor-pointer animation-popup">The Sounds of Space as NASA's Cassini Dives by Saturn</Link>
-                        <Link href={``} className="w-80 max-lg:w-72 max-lt:w-64 text-lg max-lg:text-base font-medium text-purple-700 cursor-pointer animation-popup">Broke a Glass? Someday You Might 3-D-Print a New One</Link>
-                        <Link href={``} className="w-80 max-lg:w-72 max-lt:w-64 text-lg max-lg:text-base font-medium text-purple-700 cursor-pointer animation-down">This Is a Giant Shipworm. You May Wish It Had Stayed In Its Tube.</Link>
+                        <Link href={`/gadgetSection`} className="w-64 max-lt:w-60  text-lg max-lg:text-base font-medium text-purple-700 cursor-pointer animation-popup">Running macOS and Windows 10 on the Same Computer</Link>
+                        <Link href={`/gadgetSection`} className="w-80 max-lg:w-72 max-lt:w-64 text-lg max-lg:text-base font-medium text-purple-700 cursor-pointer animation-popup">Apple opens another megastore in China amid William Barr criticism</Link>
+                        <Link href={`/tecnologySection`} className="w-64 max-lt:w-60 text-lg max-lg:text-base font-medium text-purple-700 cursor-pointer animation-popup">The Sounds of Space as NASA's Cassini Dives by Saturn</Link>
+                        <Link href={`/appSection`} className="w-80 max-lg:w-72 max-lt:w-64 text-lg max-lg:text-base font-medium text-purple-700 cursor-pointer animation-popup">Broke a Glass? Someday You Might 3-D-Print a New One</Link>
+                        <Link href={`/gameSection`} className="w-80 max-lg:w-72 max-lt:w-64 text-lg max-lg:text-base font-medium text-purple-700 cursor-pointer animation-down">This Is a Giant Shipworm. You May Wish It Had Stayed In Its Tube.</Link>
                     </div>
                 </div>
             </div>

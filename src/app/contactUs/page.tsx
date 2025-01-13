@@ -6,9 +6,11 @@ const ContactUs = () => {
     const router = useRouter()
     const feed_back = async () => {
         const wait = await new Promise((resolve) => {
+            
             setTimeout(() => {
                 resolve(alert("Your Message Has Been Submitted"))
                 router.replace(`/`)
+                wait == 4
             }, 1000)
         })
     }
