@@ -47,7 +47,7 @@ const appData = [
     
 ]
 
-let TecnologySection = () => {
+const TecnologySection = () => {
     return(
         <section className="mb-20 mt-20">
             <div className="flex flex-row gap-20 max-lt:gap-12 justify-center max-mt:flex-col max-mt:items-center">
@@ -58,6 +58,7 @@ let TecnologySection = () => {
                     return(
                         <div className="flex flex-col gap-4 animation-popup">
                             <img className="max-xl:w-[550px] max-lg:w-[480px] max-lg:h-[320px] max-lt:w-[420px] max-lt:h-[300px] max-mt:w-[480px] max-mt:h-[300px] max-sm:w-[420px] max-sm:h-[270px] max-lm:w-[360px] max-lm:h-[240px] max-mm:w-[340px] max-mm:h-[220px] max-st:w-[300px] max-st:h-[200px]" src={e.image} alt="app-image" />
+                            
                             <h1 className="text-3xl font-bold text-black max-lt:text-2xl max-lm:text-xl">{e.heading}</h1>
                             <h5 className="text-base max-mm:text-sm font-medium cursor-pointer text-purple-700">{e.editorName}</h5>
                             <p className="text-lg max-lm:text-base mb-6">{e.paragraph}</p>

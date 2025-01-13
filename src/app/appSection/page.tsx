@@ -21,7 +21,6 @@ const appData = [
         paragraph: "Cursus iaculis etiam in In nullam donec sem sed consequat scelerisque nibh amet, massa egestas risus, gravida vel amet, imperdiet volutpat rutrum sociis quis velit, commodo enim aliquet. Nunc volutpat tortor libero at augue mattis neque, suspendisse aenean praesent sit habitant laoreet felis lorem nibh diam faucibus viverra penatibus donec etiam sem consectetur vestibulum purus"
     },
     {
-        id: 1,
         image: "/img/app-img-four.jpg",
         heading: "Broke a Glass? Someday You Might 3-D-Print a New One",
         editorName: "Apps, Editors Pick / akbarh",
@@ -36,7 +35,7 @@ const appData = [
     
 ]
 
-let appSection = () => {
+const appSection = () => {
     return(
         <section className="mb-20 mt-20">
             <div className="flex flex-row gap-20 max-lt:gap-12 justify-center max-mt:flex-col max-mt:items-center">

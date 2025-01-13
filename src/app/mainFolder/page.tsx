@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-let MainFolder = () => {
+const MainFolder = () => {
     return(
         <section>
             <div className="flex flex-col gap-8 max-xl:w-[300px] max-lg:w-[280px] max-lt:w-[260px] max-mt:w-[400px] max-lm:w-[360px] max-mm:w-[340px] max-st:w-[300px]">

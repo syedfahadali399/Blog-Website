@@ -47,7 +47,7 @@ const appData = [
     
 ]
 
-let GameSection = () => {
+const GameSection = () => {
     return(
         <section className="mb-20 mt-20">
             <div className="flex flex-row gap-20 max-lt:gap-12 justify-center max-mt:flex-col max-mt:items-center">
