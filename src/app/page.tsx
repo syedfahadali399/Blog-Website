@@ -148,12 +148,12 @@ export default function Home() {
             <div className="flex flex-col gap-3 max-lt:flex-row max-lt:w-[600px] max-mt:w-[550px] max-sm:flex-col max-sm:w-[420px] max-lm:w-[360px] max-mm:w-[340px] max-st:w-[300px]">
               <img className="w-[350px] h-[250px] max-xl:w-[300px] max-xl:h-[200px] max-lg:w-[250px] max-lg:h-[175px] max-lt:w-[230px] max-mt:w-[210px] max-sm:w-[420px] max-sm:h-[260px] max-lm:w-[360px] max-lm:h-[240px] max-mm:w-[340px] max-mm:h-[220px] max-st:w-[300px] max-st:h-[200px]" src="/img/gadget-img-five.jpg" alt="image" />
               <div className="flex flex-col gap-2 max-lt:grid max-lt:grid-cols-2 max-sm:w-[420px] max-lm:w-[360px] max-sm:justify-items-center max-mm:flex max-mm:flex-col max-mm:items-center max-mm:w-[340px] max-st:w-[300px]">
-                {landingPageobject_1.map((e) => {
+                {landingPageobject_1.map((key, index) => {
                   for(let i = 0; i <= 2; i++){ 
                     return(
-                      <Link href={`${e.url}`} className=" flex flex-col gap-2 w-[300px] max-lg:w-[250px] max-lt:w-[175px] max-mt:w-[170px] max-mm:w-[340px] max-st:w-[300px]">
-                        <h1 className="font-semibold text-purple-700">{e.names}</h1>
-                         <p className="font-bold text-black cursor-pointer max-lg:text-sm">{e.paragraph}</p>
+                      <Link key={index} href={`${key.url}`} className=" flex flex-col gap-2 w-[300px] max-lg:w-[250px] max-lt:w-[175px] max-mt:w-[170px] max-mm:w-[340px] max-st:w-[300px]">
+                        <h1 className="font-semibold text-purple-700">{key.names}</h1>
+                         <p className="font-bold text-black cursor-pointer max-lg:text-sm">{key.paragraph}</p>
                       </Link>
                     )
                   }
@@ -243,13 +243,13 @@ export default function Home() {
             <div className="flex flex-col gap-3 mb-2">
               <h1 className="text-2xl font-bold text-black">Stay Connected</h1>
               <div className="flex flex-col gap-2">
-                {icons.map((e) => {
+                {icons.map((key, index) => {
                   return(
-                    <div className="flex flex-row gap-3 items-center animation-right">
-                      <img className="w-10 h-10" src={e.icon} alt="icons" />
+                    <div className="flex flex-row gap-3 items-center animation-right" key={index}>
+                      <img className="w-10 h-10" src={key.icon} alt="icons" />
                       <div className="flex flex-col gap-2">
-                        <h3 className="text-base text-purple-700 cursor-pointer font-bold">{e.socialMediaName}</h3>
-                        <p className="font-medium">{e.smparagraph}</p>
+                        <h3 className="text-base text-purple-700 cursor-pointer font-bold">{key.socialMediaName}</h3>
+                        <p className="font-medium">{key.smparagraph}</p>
                       </div>
                     </div>
                   )
@@ -272,11 +272,11 @@ export default function Home() {
               </Link>
             </div>
             <Link href={`tecnologySection`} className="flex flex-row justify-center gap-6 cursor-pointer max-mt:flex-col max-mt:items-center">
-              {landingPageobject_3.map((e) => {
+              {landingPageobject_3.map((key, index) => {
                 return(
-                  <div className="animation-popup flex flex-col gap-3 max-mt:w-[400px] max-lm:w-[360px] max-mm:w-[340px] max-st:w-[300px] max-lm:mb-4">
-                    <img className="w-[500px] h-[300px] max-2xl:w-[420px] max-2xl:h-[275px] max-xl:w-[320px] max-xl:h-[220px] max-lg:w-[296px] max-lg:h-[200px] max-lt:w-[260px] max-lt:h-[180px] max-mt:w-[400px] max-mt:h-[240px] max-lm:w-[360px] max-mm:w-[340px] max-mm:h-[220px] max-st:w-[300px] max-st:h-[200px]" src={e.image} alt="tech-image" />
-                    <h1 className="text-black text-2xl font-bold cursor-pointer max-xl:text-xl max-lg:text-lg max-lt:text-base">{e.heading}</h1>
+                  <div className="animation-popup flex flex-col gap-3 max-mt:w-[400px] max-lm:w-[360px] max-mm:w-[340px] max-st:w-[300px] max-lm:mb-4" key={index}>
+                    <img className="w-[500px] h-[300px] max-2xl:w-[420px] max-2xl:h-[275px] max-xl:w-[320px] max-xl:h-[220px] max-lg:w-[296px] max-lg:h-[200px] max-lt:w-[260px] max-lt:h-[180px] max-mt:w-[400px] max-mt:h-[240px] max-lm:w-[360px] max-mm:w-[340px] max-mm:h-[220px] max-st:w-[300px] max-st:h-[200px]" src={key.image} alt="tech-image" />
+                    <h1 className="text-black text-2xl font-bold cursor-pointer max-xl:text-xl max-lg:text-lg max-lt:text-base">{key.heading}</h1>
                     <div className="h-[24px] flex flex-row gap-[16px] items-center">
                     <div className="flex flex-row gap-1 justify-center items-center">
                       <img className="w-[16px] h-[16px] max-lt:w-[16px] max-lt:h-[16px]" src="/blogimg/iconone.png" alt="iconone" />  
@@ -287,7 +287,7 @@ export default function Home() {
                       <p className="w-[96px] h-[18px] font-normal text-sm text-black max-lt:text-[14px] max-lt:w-[80px] max-lt:h-[20px] hover:text-[#3F83F8] cursor-pointer">14 Oct 2022</p>  
                      </div>
                    </div>
-                   <p className="text-base font-medium max-lg:text-sm max-lt:text-xs">{e.paragraph}</p>
+                   <p className="text-base font-medium max-lg:text-sm max-lt:text-xs">{key.paragraph}</p>
                   </div>
                 )
               })}
@@ -327,11 +327,11 @@ export default function Home() {
               </Link>
            </div>
            <Link href={`gadgetSection`} className="grid grid-cols-2 gap-16 max-sm:gap-12 max-sm:flex max-sm:flex-col max-sm:items-center">
-              {landingPageobject_4.map((e) => {
+              {landingPageobject_4.map((key ,index) => {
                 return(
-                  <div className="flex flex-col gap-4 animation-popup">
-                    <img className="max-2xl:w-[420px] max-2xl:h-[275px] max-xl:w-[400px] max-xl:h-[260px] max-lg:w-[360px] max-lg:h-[230px] max-lt:w-[320px] max-lt:h-[220px] max-mt:w-[300px] max-mt:h-[180px] max-sm:w-[420px] max-sm:h-[250px] max-lm:w-[360px] max-mm:h-[230px] max-mm:w-[340px] max-st:w-[300px] max-st:h-[210px]" src={e.image} alt="gadget-image" />
-                    <h1 className="text-black text-2xl font-bold cursor-pointer max-xl:text-xl max-lt:text-base max-mt:text-sm max-sm:text-xl">{e.heading}</h1>
+                  <div className="flex flex-col gap-4 animation-popup" key={index}>
+                    <img className="max-2xl:w-[420px] max-2xl:h-[275px] max-xl:w-[400px] max-xl:h-[260px] max-lg:w-[360px] max-lg:h-[230px] max-lt:w-[320px] max-lt:h-[220px] max-mt:w-[300px] max-mt:h-[180px] max-sm:w-[420px] max-sm:h-[250px] max-lm:w-[360px] max-mm:h-[230px] max-mm:w-[340px] max-st:w-[300px] max-st:h-[210px]" src={key.image} alt="gadget-image" />
+                    <h1 className="text-black text-2xl font-bold cursor-pointer max-xl:text-xl max-lt:text-base max-mt:text-sm max-sm:text-xl">{key.heading}</h1>
                     <div className="h-[24px] flex flex-row gap-[12px] items-center">
                       <div className="flex flex-row gap-1 justify-center items-center">
                         <img className="w-[16px] h-[16px] max-lt:w-[16px] max-lt:h-[16px]" src="/blogimg/iconone.png" alt="iconone" />  
@@ -342,7 +342,7 @@ export default function Home() {
                         <p className="w-[96px] h-[18px] font-normal text-sm text-black max-lt:text-[14px] max-lt:w-[80px] max-lt:h-[20px] max-sm:text-[12px] hover:text-[#3F83F8] cursor-pointer">14 Oct 2022</p>  
                       </div>
                     </div>
-                    <p className="text-base font-medium max-2xl:w-[420px] max-xl:w-[400px] max-lg:w-[360px] max-lt:w-[320px] max-mt:w-[270px] max-sm:w-[420px] max-lm:w-[360px] max-mm:w-[340px] max-st:w-[300px] max-lg:text-sm max-mt:text-xs max-sm:text-base max-lm:text-sm">{e.paragraph}</p>
+                    <p className="text-base font-medium max-2xl:w-[420px] max-xl:w-[400px] max-lg:w-[360px] max-lt:w-[320px] max-mt:w-[270px] max-sm:w-[420px] max-lm:w-[360px] max-mm:w-[340px] max-st:w-[300px] max-lg:text-sm max-mt:text-xs max-sm:text-base max-lm:text-sm">{key.paragraph}</p>
                  </div>
                 )
               })}
@@ -368,11 +368,11 @@ export default function Home() {
               </Link>
            </div>
            <Link href={`gameSection`} className="flex flex-row gap-5 cursor-pointer max-mt:flex-col max-mt:items-center">
-              {landingPageobject_5.map((e) => {
+              {landingPageobject_5.map((key, index) => {
                 return(
-                  <div className="animation-popup flex flex-col gap-5 max-lt:gap-4 max-mt:w-[450px] max-sm:w-[420px] max-lm:w-[360px] max-mm:w-[340px] max-st:w-[300px] max-lm:mb-4">
-                    <img className="w-[700px] h-[400px] max-2xl:w-[640px] max-xl:w-[500px] max-xl:h-[330px] max-lg:w-[440px] max-lg:h-[300px] max-lt:w-[360px] max-lt:h-[265px] max-mt:w-[450px] max-mt:h-[300px] max-sm:w-[420px] max-sm:h-[260px] max-lm:w-[360px] max-lm:h-[240px] max-mm:w-[340px] max-mm:h-[220px] max-st:w-[300px] max-st:h-[200px]" src={e.image} alt="" />
-                    <h1 className="text-black text-2xl font-bold cursor-pointer max-xl:text-xl max-lg:text-lg">{e.heading}</h1>  
+                  <div className="animation-popup flex flex-col gap-5 max-lt:gap-4 max-mt:w-[450px] max-sm:w-[420px] max-lm:w-[360px] max-mm:w-[340px] max-st:w-[300px] max-lm:mb-4" key={index}>
+                    <img className="w-[700px] h-[400px] max-2xl:w-[640px] max-xl:w-[500px] max-xl:h-[330px] max-lg:w-[440px] max-lg:h-[300px] max-lt:w-[360px] max-lt:h-[265px] max-mt:w-[450px] max-mt:h-[300px] max-sm:w-[420px] max-sm:h-[260px] max-lm:w-[360px] max-lm:h-[240px] max-mm:w-[340px] max-mm:h-[220px] max-st:w-[300px] max-st:h-[200px]" src={key.image} alt="image" />
+                    <h1 className="text-black text-2xl font-bold cursor-pointer max-xl:text-xl max-lg:text-lg">{key.heading}</h1>  
                     <div className="h-[24px] flex flex-row gap-[16px] items-center">
                       <div className="flex flex-row gap-1 justify-center items-center">
                         <img className="w-[16px] h-[16px] max-lt:w-[16px] max-lt:h-[16px]" src="/blogimg/iconone.png" alt="iconone" />  
@@ -383,7 +383,7 @@ export default function Home() {
                         <p className="w-[96px] h-[18px] font-normal text-sm text-black max-lt:text-[14px] max-lt:w-[80px] max-lt:h-[20px] max-sm:text-[12px] hover:text-[#3F83F8] cursor-pointer">14 Oct 2022</p>  
                       </div>
                    </div>
-                    <p className="text-base font-medium max-lg:text-sm">{e.paragraph}</p>
+                    <p className="text-base font-medium max-lg:text-sm">{key.paragraph}</p>
                   </div>
                 )
               })}
@@ -404,11 +404,11 @@ export default function Home() {
               </Link>
             </div>
             <Link href={`appSection`} className="flex flex-row justify-center gap-6 cursor-pointer max-mt:flex-col max-mt:items-center">
-              {landingPageobject_6.map((e) => {
+              {landingPageobject_6.map((key, index) => {
                 return(
-                  <div className="animation-popup flex flex-col gap-3 max-mt:w-[500px] max-sm:w-[420px] max-lm:w-[360px] max-mm:w-[340px] max-st:w-[300px]">
-                    <img className="w-[500px] h-[300px] max-2xl:w-[420px] max-2xl:h-[275px] max-xl:w-[340px] max-xl:h-[220px] max-lg:w-[290px] max-lg:h-[200px] max-lt:w-[230px] max-lt:h-[175px] max-mt:w-[500px] max-mt:h-[300px] max-sm:w-[420px] max-sm:h-[260px] max-lm:w-[360px] max-lm:h-[240px] max-mm:w-[340px] max-mm:h-[220px] max-st:w-[300px] max-st:h-[200px]" src={e.image} alt="tech-image" />
-                    <h1 className="text-black text-2xl font-bold cursor-pointer max-xl:text-xl max-lg:text-lg max-lt:text-base max-sm:text-lg">{e.heading}</h1>
+                  <div className="animation-popup flex flex-col gap-3 max-mt:w-[500px] max-sm:w-[420px] max-lm:w-[360px] max-mm:w-[340px] max-st:w-[300px]" key={index}>
+                    <img className="w-[500px] h-[300px] max-2xl:w-[420px] max-2xl:h-[275px] max-xl:w-[340px] max-xl:h-[220px] max-lg:w-[290px] max-lg:h-[200px] max-lt:w-[230px] max-lt:h-[175px] max-mt:w-[500px] max-mt:h-[300px] max-sm:w-[420px] max-sm:h-[260px] max-lm:w-[360px] max-lm:h-[240px] max-mm:w-[340px] max-mm:h-[220px] max-st:w-[300px] max-st:h-[200px]" src={key.image} alt="tech-image" />
+                    <h1 className="text-black text-2xl font-bold cursor-pointer max-xl:text-xl max-lg:text-lg max-lt:text-base max-sm:text-lg">{key.heading}</h1>
                     <div className="h-[24px] flex flex-row gap-[16px] items-center">
                       <div className="flex flex-row gap-1 justify-center items-center">
                         <img className="w-[16px] h-[16px] max-lt:w-[16px] max-lt:h-[16px]" src="/blogimg/iconone.png" alt="iconone" />  
@@ -419,7 +419,7 @@ export default function Home() {
                         <p className="w-[96px] h-[18px] font-normal text-sm text-black max-lt:text-[14px] max-lt:w-[80px] max-lt:h-[20px] max-sm:text-[12px] hover:text-[#3F83F8] cursor-pointer">14 Oct 2022</p>  
                       </div>
                    </div>
-                   <p className="text-base font-medium max-lg:text-sm">{e.paragraph}</p>
+                   <p className="text-base font-medium max-lg:text-sm">{key.paragraph}</p>
                   </div>
                 )
               })}
